@@ -1,0 +1,17 @@
+public class MyRunnable implements Runnable {
+    public void run() {
+        // Code to be executed by the thread
+        System.out.println("Thread is running");
+    }
+
+    public static void main(String[] args) {
+        // Create an instance of the class implementing Runnable
+        MyRunnable myRunnable = new MyRunnable();
+        
+        // Create a Thread object with the Runnable instance
+        Thread thread = new Thread(myRunnable);
+        
+        // Start the thread
+        thread.start();
+    }
+}
